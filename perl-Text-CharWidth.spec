@@ -7,6 +7,7 @@ Group:		Development/Perl
 Source0:	Text-CharWidth-%{version}.tar.bz2
 URL:		http://www.cpan.org
 BuildRequires:	perl-devel
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 Text::CharWidth - Get number of occupied columns of a string on
