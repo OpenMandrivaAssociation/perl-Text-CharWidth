@@ -1,7 +1,7 @@
 Summary:	Text-CharWidth module for perl 
 Name:		perl-Text-CharWidth
 Version:	0.04
-Release:	%mkrel 5
+Release:	%mkrel 6
 License:	GPL or Artistic
 Group:		Development/Perl
 Source0:	Text-CharWidth-%{version}.tar.bz2
