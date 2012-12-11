@@ -66,3 +66,44 @@ rm -rf %{buildroot}
 %{perl_vendorarch}/Text/CharWidth.pm
 %{perl_vendorarch}/auto/Text/CharWidth/CharWidth.so
 %{_mandir}/man3/*
+
+
+%changelog
+* Wed Jan 25 2012 Per Øyvind Karlsen <peroyvind@mandriva.org> 0.40.0-3
++ Revision: 768358
+- svn commit -m mass rebuild of perl extension against perl 5.14.2
+
+* Tue Jul 20 2010 Sandro Cazzaniga <kharec@mandriva.org> 0.40.0-2mdv2011.0
++ Revision: 555237
+- rebuild
+
+* Sat Aug 01 2009 Jérôme Quelin <jquelin@mandriva.org> 0.40.0-1mdv2010.0
++ Revision: 405663
+- rebuild using %%perl_convert_version
+
+* Thu Jul 31 2008 Thierry Vignaud <tv@mandriva.org> 0.04-6mdv2009.0
++ Revision: 258614
+- rebuild
+
+* Thu Jul 24 2008 Thierry Vignaud <tv@mandriva.org> 0.04-5mdv2009.0
++ Revision: 246628
+- rebuild
+
+* Mon Jan 14 2008 Pixel <pixel@mandriva.com> 0.04-3mdv2008.1
++ Revision: 151405
+- rebuild for perl-5.10.0
+
+  + Olivier Blin <blino@mandriva.org>
+    - restore BuildRoot
+
+  + Thierry Vignaud <tv@mandriva.org>
+    - kill re-definition of %%buildroot on Pixel's request
+
+* Fri Aug 31 2007 Oden Eriksson <oeriksson@mandriva.com> 0.04-2mdv2008.0
++ Revision: 76892
+- rebuild
+
+
+* Fri Jul 14 2006 Oden Eriksson <oeriksson@mandriva.com> 0.04-1mdv2007.0
+- initial Mandriva package
+
