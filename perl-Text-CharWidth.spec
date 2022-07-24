@@ -1,3 +1,4 @@
+%define _empty_manifest_terminate_build 0
 %define	modname	Text-CharWidth
 %define	modver	0.04
 
