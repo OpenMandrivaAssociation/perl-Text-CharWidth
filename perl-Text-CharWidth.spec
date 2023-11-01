@@ -1,17 +1,17 @@
-%define _empty_manifest_terminate_build 0
+%undefine _debugsource_packages
 %define	modname	Text-CharWidth
-%define	modver	0.04
 
 Summary:	Text-CharWidth module for perl 
 Name:		perl-%{modname}
-Version:	%{perl_convert_version %{modver}}
-Release:	19
+Version:	0.04
+Release:	1
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
-Url:		http://search.cpan.org/dist/%{modname}
-Source0:	http://www.cpan.org/modules/by-module/Text/%{modname}-%{modver}.tar.bz2
+Url:		https://metacpan.org/dist/%{modname}
+Source0:	https://cpan.metacpan.org/modules/by-module/Text/%{modname}-%{version}.tar.bz2
 BuildRequires:	perl-devel
 BuildRequires:  perl(Test::Simple)
+Obsoletes:	%{name} = 0.40.0-18
 
 %description
 Text::CharWidth - Get number of occupied columns of a string on
@@ -41,24 +41,24 @@ string. mbswidth(string) returns the width of the whole string.
 Parameters are to be given in locale encodings, not always in UTF-8.
 
 %prep
-%setup -q -n %{modname}-%{modver}
+%autosetup -p1 -n %{modname}-%{version}
 
 # perl path hack
 find . -type f | xargs %{__perl} -p -i -e "s|^#!/usr/local/bin/perl|#!%{_bindir}/perl|g"
 
-%build
 perl Makefile.PL INSTALLDIRS=vendor </dev/null
-%make
+
+%build
+%make_build
 
 %check
 make test
 
 %install
-%makeinstall_std
+%make_install
 
 %files
 %doc Changes README
 %{perl_vendorarch}/Text/CharWidth.pm
 %{perl_vendorarch}/auto/Text/CharWidth/CharWidth.so
 %{_mandir}/man3/*
-
