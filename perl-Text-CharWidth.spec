@@ -4,7 +4,7 @@
 Summary:	Text-CharWidth module for perl 
 Name:		perl-%{modname}
 Version:	0.04
-Release:	1
+Release:	2
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
 Url:		https://metacpan.org/dist/%{modname}
